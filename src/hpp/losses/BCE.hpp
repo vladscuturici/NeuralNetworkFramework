@@ -1,0 +1,9 @@
+#pragma once
+#include "Loss.hpp"
+#include "Matrix.hpp"
+
+class BCE : public Loss {
+public:
+    double loss(const Matrix& pred, const Matrix& ground_truth) override;
+    Matrix backward(const Matrix& pred, const Matrix& ground_truth) override;
+};
